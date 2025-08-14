@@ -1,3 +1,6 @@
+console.log('booking.js loaded');
+
+
 // js/booking.js
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
@@ -43,7 +46,8 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
     const ap = match[3].toUpperCase()
     const mins = (hh % 12) * 60 + mm + (ap === 'PM' ? 12 * 60 : 0)
     const open = 6 * 60            // 06:00
-    const close = 14 * 60 + 30     // 14:30
+    const close = 14 * 60 + 30 
+        // 14:30
     return mins >= open && mins <= close
   }
 

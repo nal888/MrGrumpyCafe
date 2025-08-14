@@ -89,7 +89,8 @@
       <!-- Form -->
       <div class="col-md-6">
         <div class="form_container">
-          <form id="bookingForm" action="#" method="post">
+          <form id="bookingForm" novalidate>
+
             <div class="form-group">
               <label for="name">Your Name *</label>
               <input id="name" name="name" type="text" class="form-control"
@@ -298,7 +299,8 @@
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <!-- Google Map -->
-   <script type="module" src="js/booking.js"></script>
+  <script type="module" src="js/booking.js"></script>
+
 
   <script>
   document.getElementById('displayYear')?.innerText = new Date().getFullYear();
