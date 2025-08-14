@@ -75,12 +75,14 @@
     <!-- end header section -->
   </div>
 
-  <!-- book section -->
+ <!-- book section -->
 <section class="book_section layout_padding">
   <div class="container">
     <div class="heading_container">
       <h2>Book A Table</h2>
-      <p class="text-muted mb-3">Walk-ins welcome. For groups of 6+ please call us — we’re a small local shop. Halal-friendly options available.</p>
+      <p class="text-muted mb-3">
+        Walk-ins welcome. For groups of 6+ please call us — we’re a small local shop. Halal-friendly options available.
+      </p>
     </div>
 
     <div class="row">
@@ -153,14 +155,18 @@
 
             <div class="form-group">
               <label for="notes">Notes (allergies, pram space, halal preference, etc.)</label>
-              <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Tell us what you need"></textarea>
+              <textarea id="notes" name="notes" class="form-control" rows="3"
+                        placeholder="Tell us what you need"></textarea>
             </div>
 
             <!-- Simple spam honeypot -->
             <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
 
+            <!-- status message -->
+            <div id="formMsg" class="small text-muted mb-2"></div>
+
             <div class="btn_box">
-              <button type="submit" class="btn1">Request Booking</button>
+              <button id="submitBtn" type="submit" class="btn1">Request Booking</button>
             </div>
 
             <p class="mt-2 mb-0 small text-muted">
@@ -292,7 +298,8 @@
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <!-- Google Map -->
-   <script src="js/booking.js"></script>
+   <script type="module" src="js/booking.js"></script>
+
   <script>
   document.getElementById('displayYear')?.innerText = new Date().getFullYear();
   </script>
